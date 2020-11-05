@@ -64,15 +64,23 @@ public class Student {
         this.MODULES = MODULES;
     }
 
+
+
     public static void main(String[] args) {
 
-        Student s = new Student();
+        /* Student s = new Student();
         s.setNAME("Abe");
         s.setAGE(17);
+        s.setCOURSES("CSIT");
+        s.setDOB("25/12/00");
+        s.setID(122222);
+        s.setMODULES("Software Engineering");
         System.out.println(s.getAGE());
         System.out.println(s.getNAME());
         s.setUSERNAME( s.getNAME(), s.getAGE());
         System.out.println(s.getUSERNAME());
+        */
+
     }
 
 
