@@ -4,12 +4,32 @@ public class Course {
 
     String CourseName;
 
+    Course(String Coursename)
+    {
+        this.CourseName = Coursename;
+    }
 
+    public String getCourseName()
+    {
+        return CourseName;
+    }
 
-    public static void main(String args[]){
+    public static void main(String args[]) {
+        for (int i = 0; i < 3; i++)
+        {
+            Course c = new Course("Course" + i);
 
-        Module[] module = new Module[10];
+        }
+        //Module[] module = new Module[10];
+        ArrayList<Module> modulelist = new ArrayList();
+        for (int i = 0; i < 5; i++) {
 
+            Module m = new Module("Module"+i, "Mod"+i);
+            modulelist.add(m);
+
+        }
+            ////////////////////////////////////////////////////////////////
+ /*
         ArrayList<Student> CourseStudentlist = new ArrayList();
         for (int i = 0; i < 20; i++) {
 
@@ -23,27 +43,22 @@ public class Course {
             CourseStudentlist.add(student);
 
         }
+*/
+        Module printmodule = new Module("","");
 
-        Student printCoursestudent = new Student();
+        for (int i = 0; i < modulelist.size(); i++) {
 
-        for (int i = 0; i < CourseStudentlist.size(); i++) {
+            printmodule = modulelist.get(i);
 
-            printCoursestudent = CourseStudentlist.get(i);
-            System.out.println("Student Name:" + printCoursestudent.getNAME() +
-                    "Student Age:" + printCoursestudent.getAGE() +
-                    "Student ID:" + printCoursestudent.getID() +
-                    "Student Username:" + printCoursestudent.getUSERNAME() +
-                    "Student DOB:" + printCoursestudent.getCOURSES() +
-                    "Student Course:" + printCoursestudent.getCOURSES() +
-                    "Student Modules:" + printCoursestudent.getMODULES() );
+            System.out.println("Module Name:" + printmodule.getMODNAME());
 
         }
 
 
 
+        }
+
     }
 
-
-}
 
 
