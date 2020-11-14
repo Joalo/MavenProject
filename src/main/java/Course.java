@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-import org.joda.time.LocalDateTime;
+import org.joda.time.LocalDate;
 
 public class Course {
 
@@ -31,7 +31,7 @@ public class Course {
         this.STDate = StartDATE;
     }
 
-    public LocaDate getSTDATE()
+    public LocalDate getSTDATE()
     {
         return STDate;
     }
@@ -41,7 +41,7 @@ public class Course {
         this.EDDate = EndDATE;
     }
 
-    public LocaDate getEDDATE()
+    public LocalDate getEDDATE()
     {
         return EDDate;
     }
