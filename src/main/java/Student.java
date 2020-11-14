@@ -1,11 +1,22 @@
+import java.util.ArrayList;
+
 public class Student {
     String DOB;
     int AGE;
     String NAME;
     int ID;
     String USERNAME;
-    String COURSES;
-    String MODULES;
+    ArrayList<Course> COURSESLIST;
+    ArrayList<Module> MODULESLIST;
+
+    public Student(String db, int age, String name, int id, ArrayList<Course> Cour, ArrayList<Module> mods){
+        this.DOB = db;
+        this.AGE = age;
+        this.NAME = name;
+        this.ID = id;
+        this.COURSESLIST = Cour;
+        this.MODULESLIST = mods;
+    }
 
     public String getDOB() {
         return DOB;
@@ -45,41 +56,23 @@ public class Student {
     }
 
     public void setUSERNAME(String NAME, int AGE) {
+        this.NAME = NAME;
+        this.AGE = AGE;
         this.USERNAME = NAME + AGE;
     }
 
-    public String getCOURSES() {
-        return COURSES;
+    public void setCOURSES(ArrayList<Course> Cour) {
+        this.COURSESLIST = Cour;
     }
 
-    public void setCOURSES(String COURSES) {
-        this.COURSES = COURSES;
+    public void setMODULES(ArrayList<Module> mods) {
+        this.MODULESLIST = mods;
     }
-
-    public String getMODULES() {
-        return MODULES;
-    }
-
-    public void setMODULES(String MODULES) {
-        this.MODULES = MODULES;
-    }
-
 
 
     public static void main(String[] args) {
 
-        /* Student s = new Student();
-        s.setNAME("Abe");
-        s.setAGE(17);
-        s.setCOURSES("CSIT");
-        s.setDOB("25/12/00");
-        s.setID(122222);
-        s.setMODULES("Software Engineering");
-        System.out.println(s.getAGE());
-        System.out.println(s.getNAME());
-        s.setUSERNAME( s.getNAME(), s.getAGE());
-        System.out.println(s.getUSERNAME());
-        */
+
 
     }
 

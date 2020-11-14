@@ -1,59 +1,72 @@
 import java.util.ArrayList;
+import org.joda.time.LocalDateTime;
 
 public class Course {
 
-    String CourseName;
+    String CourseNAME;
+    ArrayList<Student>STUDENTLIST;
+    ArrayList<Module>MODULELIST;
+    LocalDate STDate;
+    LocalDate EDDate;
 
-    Course(String Coursename)
+    Course(String Coursename, ArrayList<Student>STU, ArrayList<Module>mods, LocalDate StartDATE, LocalDate EndDATE )
     {
-        this.CourseName = Coursename;
+        this.CourseNAME = Coursename;
+        this.STDate = StartDATE;
+        this.EDDate = EndDATE;
+    }
+
+    public void setCourseNAME(String Coursename)
+    {
+        this.CourseNAME = Coursename;
     }
 
     public String getCourseName()
     {
-        return CourseName;
+        return CourseNAME;
+    }
+
+    public void setSTDATE(LocalDate StartDATE)
+    {
+        this.STDate = StartDATE;
+    }
+
+    public LocaDate getSTDATE()
+    {
+        return STDate;
+    }
+
+    public void setEDDATE(LocalDate EndDATE)
+    {
+        this.EDDate = EndDATE;
+    }
+
+    public LocaDate getEDDATE()
+    {
+        return EDDate;
+    }
+
+    public ArrayList<Student> returnStudent(){
+
+        return STUDENTLIST;
+    }
+
+    public ArrayList<Module> returnModule(){
+
+        return MODULELIST;
+    }
+
+    public void setSTUDENTLIST(ArrayList<Student> STU){
+
+        STUDENTLIST = STU;
+    }
+
+    public void setMODULELIST(ArrayList<Module> mods){
+
+        MODULELIST = mods;
     }
 
     public static void main(String args[]) {
-        for (int i = 0; i < 3; i++)
-        {
-            Course c = new Course("Course" + i);
-
-        }
-        //Module[] module = new Module[10];
-        ArrayList<Module> modulelist = new ArrayList();
-        for (int i = 0; i < 5; i++) {
-
-            Module m = new Module("Module"+i, "Mod"+i);
-            modulelist.add(m);
-
-        }
-            ////////////////////////////////////////////////////////////////
- /*
-        ArrayList<Student> CourseStudentlist = new ArrayList();
-        for (int i = 0; i < 20; i++) {
-
-            Student student = new Student();
-            student.setNAME("St" + i);
-            student.setAGE(19);
-            student.setID(20 + i);
-            student.setDOB("12/05/00");
-            student.setMODULES("");
-            student.setCOURSES("");
-            CourseStudentlist.add(student);
-
-        }
-*/
-        Module printmodule = new Module("","");
-
-        for (int i = 0; i < modulelist.size(); i++) {
-
-            printmodule = modulelist.get(i);
-
-            System.out.println("Module Name:" + printmodule.getMODNAME());
-
-        }
-
 
 
         }
