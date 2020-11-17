@@ -65,10 +65,13 @@ public class Student {
         this.COURSESLIST = Cour;
     }
 
+    public ArrayList<Course> returnCourse(){ return COURSESLIST;}
+
     public void setMODULES(ArrayList<Module> mods) {
         this.MODULESLIST = mods;
     }
 
+    public ArrayList<Module> returnModule(){ return MODULESLIST;}
 
     public static void main(String[] args) {
 
