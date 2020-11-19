@@ -4,14 +4,14 @@ import java.util.ArrayList;
 
 public class Student {
     LocalDate DOB;
-    int AGE;
+    String AGE;
     String NAME;
     int ID;
     String USERNAME;
     ArrayList<Course> COURSESLIST;
     ArrayList<Module> MODULESLIST;
 
-    public Student(LocalDate db, int age, String name, int id, ArrayList<Course> Cour, ArrayList<Module> mods){
+    public Student(LocalDate db, String age, String name, int id, ArrayList<Course> Cour, ArrayList<Module> mods){
         this.DOB = db;
         this.AGE = age;
         this.NAME = name;
@@ -28,11 +28,11 @@ public class Student {
         this.DOB = DOB;
     }
 
-    public int getAGE() {
+    public String getAGE() {
         return AGE;
     }
 
-    public void setAGE(int AGE) {
+    public void setAGE(String AGE) {
         this.AGE = AGE;
     }
 
@@ -52,15 +52,12 @@ public class Student {
         this.ID = ID;
     }
 
-    public String getUSERNAME() {
+    public String USERNAME(String NAME, String AGE) {
+        String nameholder = this.getNAME() ;
+        String Ageholder = this.getAGE() ;
 
+        this.USERNAME = nameholder + Ageholder;
         return USERNAME;
-    }
-
-    public void setUSERNAME(String NAME, int AGE) {
-        this.NAME = NAME;
-        this.AGE = AGE;
-        this.USERNAME = NAME + AGE;
     }
 
     public void setCOURSES(ArrayList<Course> Cour) {
@@ -76,7 +73,6 @@ public class Student {
     public ArrayList<Module> returnModule(){ return MODULESLIST;}
 
     public static void main(String[] args) {
-
 
 
     }
