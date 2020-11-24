@@ -66,10 +66,36 @@ public class Course {
         MODULELIST = mods;
     }
 
-    public static void main(String args[]) {
-
+    public void AddStudentToCourse(Student STU)
+    {
+        if(this.STUDENTLIST.contains(STU)){
+            STU.addCourse(this);
+            return;
 
         }
+        else
+            this.STUDENTLIST.add(STU);
+        STU.addCourse(this);
+    }
+
+    public void AddModuleToCourse(Module mods,Course cour){
+        if (this.MODULELIST.contains(mods)){
+
+            return;
+        }else
+
+            MODULELIST.add(mods);
+        return;
+    }
+
+    public static void main(String args[])
+    {
+
+
+    }
+
+
+
 
     }
 

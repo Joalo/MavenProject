@@ -8,7 +8,7 @@ public class Module {
     ArrayList<Student>STUDENTLIST;
     ArrayList<Course>COURSELIST;
 
-    Module(String modname,String Moid, ArrayList<Student>STU, ArrayList<Course>cour)
+    Module(String modname,String Moid, ArrayList<Student> STU, ArrayList<Course> cour)
     {
         this.MODNAME = modname;
         this.MODID = Moid;
@@ -33,18 +33,18 @@ public class Module {
         return MODID;
     }
 
-    public void setMODID(String Moid){
-
+    public void setMODID(String Moid)
+    {
         MODID = Moid;
     }
 
-    public ArrayList<Student> returnStudent(){
-
+    public ArrayList<Student> returnStudent()
+    {
         return STUDENTLIST;
     }
 
-    public ArrayList<Course> returnCourse(){
-
+    public ArrayList<Course> returnCourse()
+    {
         return COURSELIST;
     }
 
@@ -58,13 +58,39 @@ public class Module {
         COURSELIST = cour;
     }
 
+    public void addStudent(Student STU, Module mods)
+    {
+       if(this.returnStudent().contains(STU))
+       {
+           return;
+       }
+        else
+       {
+           mods.STUDENTLIST.add(STU);
+       }
 
-    public static void main(String args[]){
+    }
 
+        public void ModuleinCourse(Module mods,Course cour){
 
-
+        if (cour.returnModule().contains(mods))
+        {
+            cour.AddModuleToCourse(mods, cour);
+            return;
+        }
+        else
+            {
+            mods.COURSELIST.add(cour);
+            cour.AddModuleToCourse(mods, cour);
             }
+    }
 
+    public static void main(String args[])
+    {
+
+
+
+    }
 
 
 
